@@ -6,6 +6,7 @@ import CmsDropdown from "./components/navbar/CMS";
 import OtherTrainingDropdown from "./components/navbar/other_courses";
 import CorporateDropdown from "./components/navbar/corporate";
 import CivilDropdown from "./components/navbar/civil";
+import BigImage from "./components/bigImage/bigImage";
 export default function Home() {
   return (
     <div>
@@ -44,19 +45,30 @@ export default function Home() {
           <CorporateDropdown />
           <OtherTrainingDropdown />
           <CivilDropdown />
-          <div
-            className="relative mr-12"><button
-              className="px-4 py-2 text-sm hover:text-[#f39200] flex items-center"
-            >
+          <div className="relative mr-12">
+            <button className="px-4 py-2 text-sm hover:text-[#f39200] flex items-center">
               Blog
-
-            </button></div>
-
+            </button>
+          </div>
         </div>
-
-
       </div>
-
+      <div className="big-image-grid-container">
+      <BigImage
+        buttonLabel="Apply"
+        imageSrc="/images/training.jpg"
+        bottomText="Professional Training and Project work"
+      />
+      <BigImage
+        buttonLabel="Apply Now"
+        imageSrc="/images/internship.jpg"
+        bottomText="Intensive Internship"
+      />
+      <BigImage
+        buttonLabel="Read More"
+        imageSrc="/images/placement.jpg"
+        bottomText="Industry Placement"
+      />
+      </div>
     </div>
   );
 }
