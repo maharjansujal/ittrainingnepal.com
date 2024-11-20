@@ -1,15 +1,15 @@
 'use client';
 import { useState } from 'react';
-import {programming} from '@/app/utils/constants';
+import {other_courses} from '@/app/utils/constants';
 
-export default function ProgrammingDropdown() {
+export default function OtherTrainingDropdown() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const column1 = programming.slice(0, 10); // First 10 items
-  const column2 = programming.slice(10);
+  const column1 = other_courses.slice(0, 10); // First 10 items
+  const column2 = other_courses.slice(10);
 
   return (
     <div
@@ -22,7 +22,7 @@ export default function ProgrammingDropdown() {
         onClick={toggleDropdown}
         className="px-4 py-2 text-sm hover:text-[#f39200] flex items-center"
       >
-        Programming
+        Other Courses
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

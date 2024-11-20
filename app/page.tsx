@@ -1,5 +1,11 @@
 import Image from "next/image";
 import ProgrammingDropdown from "./components/navbar/programming";
+import DesigningDropdown from "./components/navbar/designing";
+import CertificationDropdown from "./components/navbar/certification";
+import CmsDropdown from "./components/navbar/CMS";
+import OtherTrainingDropdown from "./components/navbar/other_courses";
+import CorporateDropdown from "./components/navbar/corporate";
+import CivilDropdown from "./components/navbar/civil";
 export default function Home() {
   return (
     <div>
@@ -17,26 +23,40 @@ export default function Home() {
         </span>
       </div>
       <div className="flex flex-cols align-middle justify-between">
-        <div className="flex items-center ml-16 bg-green-400">
-        <Image
-          src={"/image.png"}
-          alt={"ittrainingnepallogo"}
-          width={50}
-          height={50}
-          className="object-contain"
-        />
-        <div className="flex flex-col align-middle ml-2 bg-yellow-400">
-        <span className="font-black text-[#0a4587]">IT TRAINING NEPAL</span>
-        <span className="text-xs font-medium">Imparting IT Skills</span>
+        <div className="flex items-center ml-16">
+          <Image
+            src={"/image.png"}
+            alt={"ittrainingnepallogo"}
+            width={50}
+            height={50}
+            className="object-contain"
+          />
+          <div className="flex flex-col align-middle ml-2 ">
+            <span className="font-black text-[#0a4587]">IT TRAINING NEPAL</span>
+            <span className="text-xs font-medium">Imparting IT Skills</span>
+          </div>
         </div>
+        <div className="flex mr-16">
+          <ProgrammingDropdown />
+          <DesigningDropdown />
+          <CertificationDropdown />
+          <CmsDropdown />
+          <CorporateDropdown />
+          <OtherTrainingDropdown />
+          <CivilDropdown />
+          <div
+            className="relative mr-12"><button
+              className="px-4 py-2 text-sm hover:text-[#f39200] flex items-center"
+            >
+              Blog
+
+            </button></div>
+
+        </div>
+
+
       </div>
-      <div>
-        <ProgrammingDropdown/>
-      </div>
-      
-      
-      </div>
-      
+
     </div>
   );
 }
