@@ -1,71 +1,38 @@
 import React from "react";
+import Image from "next/image";
 
-const BigImage = ({
-    buttonLabel,
-    imageSrc,
-    bottomText,
-}: {
-    buttonLabel: string;
-    imageSrc: string;
-    bottomText: string;
-}) => {
-    return (
-        <div className="image-card">
-            <img src={imageSrc} alt="card image" className="image" />
-            <div className="overlay">
-                <p className="bottom-text">{bottomText}</p>
-                <button className="btn">{buttonLabel}</button>
-            </div>
-            <style jsx>{`
-        .image-card {
-          position: relative;
-          width: 100%;
-          aspect-ratio: 1; /* Ensures square dimensions */
-          overflow: hidden;
-        }
+interface BigImageProps {
+  buttonColor: string;
+  imageSrc: string;
+  bottomText: string;
+  buttonText: React.ReactNode;
+  className?: string;
+}
 
-        .image {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .overlay {
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
-          padding: 1rem;
-          box-sizing: border-box;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-        }
-
-        .bottom-text {
-          color: white;
-          margin: 0;
-          font-size: 1.2rem;
-          font-weight: 600;
-        }
-
-        .btn {
-          margin-top: 0.5rem;
-          padding: 0.5rem 1rem;
-          background-color: #0070f3;
-          color: white;
-          border: none;
-          cursor: pointer;
-          font-size: 1rem;
-          border-radius: 5px;
-        }
-
-        .btn:hover {
-          background-color: #005bb5;
-        }
-      `}</style>
-        </div>
-    );
+const BigImage: React.FC<BigImageProps> = ({ buttonColor, imageSrc, bottomText, buttonText }) => {
+  return (
+    <div className="relative overflow-hidden">
+      {/* Use 'fill' for responsive images */}
+      <div className="relative w-full h-[400px]"> 
+        <Image
+          src={imageSrc}
+          alt={bottomText}
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 30vw"
+          className="object-cover"
+        />
+      </div>
+      <div className="absolute bottom-0 w-full h-[35%] bg-gradient-to-t from-black to-transparent p-5 flex flex-col justify-end">
+        <p className="text-white text-sm">{bottomText}</p>
+        <button
+          className="w-2/3 mt-3 px-4 py-2 text-sm font-medium rounded-md"
+          style={{ backgroundColor: buttonColor }}
+        >
+          {buttonText}
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default BigImage;

@@ -23,8 +23,8 @@ export default function Home() {
           </button>
         </span>
       </div>
-      <div className="flex flex-cols align-middle justify-between">
-        <div className="flex items-center ml-16">
+      <div className="w-[90%] h-[100px] mx-auto bg-yellow-400 flex items-center justify-between">
+        <div className="flex items-center">
           <Image
             src={"/image.png"}
             alt={"ittrainingnepallogo"}
@@ -37,7 +37,38 @@ export default function Home() {
             <span className="text-xs font-medium">Imparting IT Skills</span>
           </div>
         </div>
-        <div className="flex mr-16">
+        <div className="flex flex-col items-center w-[70%] bg-green-400 h-full">
+          <div className="flex justify-start w-full h-1/2 bg-blue-400">
+            <ProgrammingDropdown />
+            <DesigningDropdown />
+            <CertificationDropdown />
+            <CmsDropdown />
+            <CorporateDropdown />
+            <OtherTrainingDropdown />
+            <CivilDropdown />
+            <div className="relative">
+              <button className="px-4 py-2 text-sm hover:text-[#f39200] flex items-center">
+                Blog
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="w-[70%] mx-auto">
+        <div className="">
+          <Image
+            src={"/image.png"}
+            alt={"ittrainingnepallogo"}
+            width={50}
+            height={50}
+            className="object-contain"
+          />
+          <div className="flex flex-col align-middle ml-2 ">
+            <span className="font-black text-[#0a4587]">IT TRAINING NEPAL</span>
+            <span className="text-xs font-medium">Imparting IT Skills</span>
+          </div>
+        </div>
+        <div className="flex justify-end space-x-6">
           <ProgrammingDropdown />
           <DesigningDropdown />
           <CertificationDropdown />
@@ -52,22 +83,27 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="big-image-grid-container">
-      <BigImage
-        buttonLabel="Apply"
-        imageSrc="/images/training.jpg"
-        bottomText="Professional Training and Project work"
-      />
-      <BigImage
-        buttonLabel="Apply Now"
-        imageSrc="/images/internship.jpg"
-        bottomText="Intensive Internship"
-      />
-      <BigImage
-        buttonLabel="Read More"
-        imageSrc="/images/placement.jpg"
-        bottomText="Industry Placement"
-      />
+      <div className="grid grid-cols-[repeat(3,1fr)] gap-5;">
+        <BigImage
+          buttonText="Apply"
+          imageSrc="/Industry_Placement.webp"
+          bottomText="Professional Training and Project work"
+          buttonColor="blue"
+          className="relative overflow-hidden"
+        />
+        <BigImage
+          buttonText={<u>Apply Now</u>}
+          imageSrc="/Intensive_Internship.webp"
+          buttonColor="blue"
+          bottomText="Intensive Internship"
+        />
+        <BigImage
+          buttonText="Read More"
+          imageSrc="/Professional Training_and_Project_work.webp"
+          buttonColor="blue"
+          bottomText="Industry Placement"
+          className="relative overflow-hidden"
+        />
       </div>
     </div>
   );
