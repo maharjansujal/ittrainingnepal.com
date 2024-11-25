@@ -1,6 +1,6 @@
 'use client';
 import { useState } from 'react';
-import {certification} from '@/app/utils/constants';
+import { certification } from '@/app/utils/constants';
 
 export default function CertificationDropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,12 +8,12 @@ export default function CertificationDropdown() {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const column1 = certification.slice(0, 10);
+  const column1 = certification.slice(0, 10); // First 10 items
   const column2 = certification.slice(10);
 
   return (
     <div
-      className="relative mr-12"
+      className="relative"
       onMouseEnter={() => setIsOpen(true)}
       onMouseLeave={() => setIsOpen(false)}
     >
@@ -40,18 +40,18 @@ export default function CertificationDropdown() {
 
       {/* Dropdown Content */}
       <div
-        className={`absolute top-[40px] left-0 bg-white shadow-lg rounded-md w-[500px] transform transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'
-          } z-10`}
+        className={`absolute top-[40px] left-0 bg-white shadow-lg rounded-md transform transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 scale-100 visible' : 'opacity-0 scale-95 invisible'
+          } z-10 w-auto min-w-[500px] max-w-[700px]`}
       >
-        <div className="grid grid-cols-2 gap-4 p-4">
-          <div className="flex flex-col space-y-2 font-sans">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
+          <div className="flex flex-col space-y-2 font-sans text-sm leading-[21px]">
             {column1.map((item: string, index: number) => (
               <span key={index} className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
                 {item}
               </span>
             ))}
           </div>
-          <div className="flex flex-col space-y-2 font-sans">
+          <div className="flex flex-col space-y-2 font-sans text-sm">
             {column2.map((item: string, index: number) => (
               <span key={index} className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
                 {item}
@@ -60,6 +60,7 @@ export default function CertificationDropdown() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }

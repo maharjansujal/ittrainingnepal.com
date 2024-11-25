@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Divs with Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <style>
+        .div-container{
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width: 768px) {
+            .div-container{flex-direction: row;}
+            
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="sm:flex">
+        <div class="md:w-[33%] h-48 flex flex-col content-between md:mr-2 sm:w-full sm:mr-1">
+            <div class="w-full h-4/5 bg-red-500 mb-2">
+
+            </div>
+            <button class="w-full h-5 bg-red-500">
+                red button
+            </button>
+        </div>
+        <div class="md:w-[33%] h-48 flex flex-col content-between md:mr-2 sm:w-full sm:mr-1">
+            <div class="w-full h-4/5 bg-green-500 mb-2">
+
+            </div>
+            <button class="w-full h-5 bg-green-500">
+                green button
+            </button>
+        </div>
+        <div class="md:w-[33%] h-48 flex flex-col content-between sm:w-full">
+            <div class="w-full h-4/5 bg-blue-500 mb-2">
+
+            </div>
+            <button class="w-full h-5 bg-blue-500">
+                blue button
+            </button>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

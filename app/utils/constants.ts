@@ -1,6 +1,7 @@
 export const programming = [
     "Rust Programming",
     "C/C++ Programming",
+    "C++ Programming",
     "Python for Data Science",
     "Python Django Training",
     "Java Training",
@@ -51,7 +52,7 @@ export const certification = [
 ]
 
 export const cms = [
-    "Mangneto Training",
+    "Magneto Training",
     "Drupal Training",
     "WordPress Training",
     "Joomla Training",
