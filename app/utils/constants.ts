@@ -104,3 +104,85 @@ export const civil =[
     "Primavera and MS Project",
     "Advanced 3D Visualization"
 ]
+
+export const events_seminars=[{
+    imageSrc: "/events_and_seminars/workshop on UIUX.webp",
+    greyText: "Location: Putalisadak",
+    blackText: "Read More →"
+},
+{
+    imageSrc: "/events_and_seminars/workshop on python.webp",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+},
+{
+    imageSrc: "",
+    greyText: "Location: Putalisadak",
+    blackText: ""
+}
+]
