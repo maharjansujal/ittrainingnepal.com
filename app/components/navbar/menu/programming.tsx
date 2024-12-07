@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import { programming } from '@/app/utils/constants';
+import Link from 'next/link';
 
 export default function ProgrammingDropdown() {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,9 +47,11 @@ export default function ProgrammingDropdown() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4">
           <div className="flex flex-col space-y-2 font-sans text-sm leading-[21px]">
             {column1.map((item: string, index: number) => (
-              <span key={index} className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
-                {item}
-              </span>
+              <Link key={index} href={`/programming/${item.toLowerCase().replace(/\s+/g, '-')}`} className="hover:bg-gray-100 px-2 py-1 cursor-pointer">
+                <span>
+                  {item}
+                </span>
+              </Link>
             ))}
           </div>
           <div className="flex flex-col space-y-2 font-sans text-sm">
