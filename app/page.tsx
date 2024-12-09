@@ -1,6 +1,6 @@
 import Navbar from "./components/navbar/navbar";
 import BigImage from "./components/bigImage/bigImage";
-
+import './globals.css'
 export default function Home() {
   return (
     <div className="w-[100vw] m-0 p-0">
