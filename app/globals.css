@@ -19,3 +19,10 @@ body {
   background: var(--background);
   font-family:'Robotica', sans-serif;
 }
+
+.custom-list li::before {
+  content: '> ';
+  color: black;
+  font-weight: bold;
+  margin-right: 8px;
+}
